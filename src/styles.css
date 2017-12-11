@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  position: relative;
+  background: url('http://d38hmgjgf0kofx.cloudfront.net/images/v3/BIT_bg_maroon5.jpg')50% 0 no-repeat fixed;
+  background-size: cover;
+  height: 647px;
+  width: 100%;
+  margin: 0;
+}

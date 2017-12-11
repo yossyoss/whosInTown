@@ -1,0 +1,19 @@
+.img-container{
+  width: 17em;
+  height: 13em;
+}
+.artist-thumb {
+  max-width: 190px;
+  max-height: 150px;
+}
+.info-row {
+  margin-top: 1em;
+}
+.brand-info {
+  margin:2.4em 0 0 6em;
+}
+@media only screen and (max-width: 500px) {
+  .brand-info {
+    margin: 0;
+  }
+}

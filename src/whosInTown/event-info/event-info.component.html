@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-xs-12">
+      <h1>Who's In Town</h1>
+    </div>
+    <div class="col-md-2 col-xs-4 add-to-fav">
+      <div class="checkbox">
+        <label><input [(ngModel)]="checkboxValue" (change)="onAddToFavClicked()" type="checkbox" name="selectFav" ckass="checkbox-input">Add To Favorite</label>
+      </div>
+    </div>
+    <div class="col-xs-1 col-xs-offset-5 col-md-offset-7 back-btn">
+        <button type="button" class="btn btn-default" (click)="onBeckClicked()">Back</button>
+    </div>
+  </div>
+  <div class="row event-details" *ngIf="eventInfo?.id">
+    <p class="event-info"><strong>event metadata - </strong>id: {{eventInfo?.id}}, date: {{eventInfo?.datetime | date}}</p>
+  </div>
+  <div class="row offer-details" *ngIf="offers.length !== 0">
+    <div>
+      <p class="event-info"><strong>venue information - </strong>{{venues?.name}},{{venues?.city}}, {{venues?.region}}, {{venues?.country}}</p>
+    </div>
+  </div>
+  <div class="row offer-details" *ngIf="offers.length !== 0">
+    <div>
+      <p class="event-info" *ngFor="let offer of offers"><strong>special offer - </strong>{{offer?.type}} {{offer?.status}} <a [href]="offer?.url">here</a></p>
+    </div>
+  </div>
+  <div class="row venue-details">
+    <app-venue-map [venues]="venues"></app-venue-map>
+  </div>
+</div>

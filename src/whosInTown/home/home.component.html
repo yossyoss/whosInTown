@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <h1>Who's In Town</h1>
+      <div class="row">
+        <div class="col-lg-6 col-md-4">
+          <div class="form-group">
+            <input type="text" placeholder="Please enter a band" [(ngModel)]="inputVal" class="input-field form-control" (keydown)="keyDownFunction($event)">
+            <button class="btn btn-primary" type="button" label="Search" (click)="onSearchClicked()">Search</button>
+            <i class="fa fa-spinner fa-spin" style="font-size:24px" *ngIf="isSearching"></i>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!isSearching">
+        <div *ngIf="!noEventsResultsFound || !noArtistResultsFound">
+        <div class="row info-row">
+          <app-artist-info [artist]="artist"></app-artist-info>
+        </div>
+        <div class="row">
+          <app-events-list [events]="events"></app-events-list>
+        </div>
+        </div>
+        <div *ngIf="noEventsResultsFound && noArtistResultsFound">
+          <h3>No results. Please try again</h3>
+        </div>
+        <div *ngIf="noEventsResultsFound && !noArtistResultsFound">
+          <h3>No events were found</h3>
+        </div>
+        <div *ngIf="!noEventsResultsFound && noArtistResultsFound">
+          <h3>band info wasn't found</h3>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-6 col-xs-12 fav-section">
+      <div *ngIf="isFavoritesSelected">
+        <h1 class="fav-header">Favorites</h1>
+        <app-favorites-list></app-favorites-list>
+      </div>
+      <div *ngIf="!isFavoritesSelected">
+        <h1 class="fav-header">No favorites selected</h1>
+      </div>
+    </div>
+  </div>
+</div>

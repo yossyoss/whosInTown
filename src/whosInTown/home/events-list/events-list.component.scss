@@ -1,0 +1,28 @@
+.event-row {
+  height: 8em;
+  background: #870e0e;
+  margin: 1em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  :hover{
+    background: #ea1818;
+    border-radius: 15px;
+    padding: 1.9em;
+  }
+
+}
+.event-info {
+  position: relative;
+  padding: 1.9em;
+  font-size: 1.3em;
+  :hover{
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .event-info {
+    font-size: 1em;
+  }
+}

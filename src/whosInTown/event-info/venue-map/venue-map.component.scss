@@ -1,0 +1,8 @@
+agm-map {
+  height: 28em;
+}
+@media only screen and (max-height: 960px) {
+  agm-map {
+    height:19em;
+  }
+}

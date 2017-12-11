@@ -1,0 +1,38 @@
+.add-to-fav {
+  padding: 1em;
+  font-size: 1.5em;
+}
+.event-details, .offer-details {
+  min-height: 8em;
+  background: #870e0e;
+  margin: 1em;
+  text-align: center;
+  border-radius: 15px;
+}
+.event-info {
+  padding: 2.5em;
+  font-size: 1.3em;
+  max-height: 7em;
+}
+input[type="checkbox"] {
+  width: 0.8em;
+  height: 1em;
+}
+.back-btn {
+  padding: 1.8em;
+  button {
+    width: 7em;
+  }
+}
+.venue-details {
+  min-height: 8em;
+  margin: 1em;
+}
+a {
+  text-decoration: none;
+}
+@media only screen and (max-width: 500px) {
+  .event-info {
+    font-size: 1em;
+  }
+}

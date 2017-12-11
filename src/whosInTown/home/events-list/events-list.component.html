@@ -1,0 +1,6 @@
+<div class="event-row" *ngFor="let event of events;let i = index" (click)="onEventClicked(event.id)">
+  <p class="event-info">
+    <span>Event #{{i + 1}}</span><br>
+    <span class="event-date">{{event?.datetime | date}}</span>
+  </p>
+</div>
